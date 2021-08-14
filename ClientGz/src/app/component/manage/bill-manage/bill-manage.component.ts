@@ -50,7 +50,7 @@ export class BillManageComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      if(result != undefined){
+      if(result){
         console.log("hello");
         this.updateBill(result);
       }
