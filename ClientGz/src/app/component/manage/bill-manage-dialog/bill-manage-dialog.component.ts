@@ -18,7 +18,7 @@ export class BillManageDialogComponent implements OnInit {
     public dialogRef: MatDialogRef<BillManageDialogComponent>,
     @Optional() @Inject(MAT_DIALOG_DATA) public data: Bill
   ) {
-    this.local_data = {...data};
+    this.local_data = JSON.parse(JSON.stringify(data));
    }
    shipStt : boolean = false;
    receivedStt : boolean = false;
